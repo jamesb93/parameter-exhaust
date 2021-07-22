@@ -105,10 +105,7 @@ m.addHandler('reset', () => {
 })
 
 m.addHandler('set', i => {
-	if (i <= cartProd && i >= 0)
-		internalCounter = i
-	else
-		m.error
+	internalCounter = i
 })
 
 m.addHandler('delete', (parameter) => {
