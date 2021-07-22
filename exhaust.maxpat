@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1.0, 54.0, 838.0, 995.0 ],
+		"rect" : [ -458.0, -1353.0, 1278.0, 1319.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,24 +40,107 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-54",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 266.0, 158.0, 29.5, 22.0 ],
-					"text" : "api"
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 331.0, 175.0, 382.0, 20.0 ],
+					"text" : "4) You can dump the dictionary out if you want to view it / save it"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-50",
-					"maxclass" : "newobj",
+					"id" : "obj-5",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 101.0, 276.0, 32.0, 22.0 ],
-					"text" : "print"
+					"patching_rect" : [ 300.0, 134.0, 448.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "3) iterate over the parameter combinations... you can also call \"reset\" to start again"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 265.0, 67.0, 440.0, 33.0 ],
+					"presentation_linecount" : 3,
+					"text" : "2) Set the resolution, add some parameters then calculate the cartesian product. Parameters are in the format \"parameter $name $min $max\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 82.0, 14.0, 382.0, 20.0 ],
+					"text" : "1) Start the script (it should autostart with the correct node.script flag)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-76",
+					"maxclass" : "dict.view",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 16.0, 336.0, 391.0, 251.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-74",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 16.0, 290.0, 69.0, 22.0 ],
+					"text" : "route dump"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-73",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 290.0, 174.0, 39.0, 22.0 ],
+					"text" : "dump"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-64",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 256.0, 133.0, 42.0, 22.0 ],
+					"text" : "iterate"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 45.0, 59.0, 216.0, 49.0 ],
+					"text" : "resolution 100, parameter fundamental 600 10000, parameter period 0.1 10, parameter formant 1 500, calculate"
 				}
 
 			}
@@ -76,20 +159,8 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 263.0, 276.0, 483.0, 413.0 ],
+					"patching_rect" : [ 409.0, 336.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 172.0, 105.0, 288.0, 22.0 ],
-					"text" : "parameter grit 1. 3., parameter fangle 3 10, calculate"
 				}
 
 			}
@@ -100,7 +171,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 101.0, 105.0, 64.0, 22.0 ],
+					"patching_rect" : [ 16.0, 14.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -112,28 +183,21 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 101.0, 197.0, 181.0, 22.0 ],
+					"patching_rect" : [ 16.0, 243.0, 412.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"autostart" : 0,
+						"autostart" : 1,
 						"defer" : 0,
 						"node_bin_path" : "",
 						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
-					"text" : "node.script exhaust.js @watch 1"
+					"text" : "node.script exhaust.js @watch 1 @autostart 1"
 				}
 
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
 					"source" : [ "obj-2", 1 ]
@@ -142,7 +206,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
+					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -150,7 +214,28 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-54", 0 ]
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-64", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-73", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-76", 0 ],
+					"source" : [ "obj-74", 0 ]
 				}
 
 			}
